@@ -194,14 +194,9 @@ var UIController = (function() {
             + or - before number
             exactly 2 decimal points
             comma separating the thousands
-
             2310.4567 -> + 2,310.46
             2000 -> + 2,000.00
-        */
-
-        if(num === 0){
-            return '$ 0.00';
-        }
+            */
 
         num = Math.abs(num);
         num = num.toFixed(2);
@@ -215,7 +210,7 @@ var UIController = (function() {
 
         dec = numSplit[1];
 
-        return (type === 'exp' ? '-' : '+') + ' $' + int + '.' + dec;
+        return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
 
     };
     
